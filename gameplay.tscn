@@ -1,10 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ciya5xt0t76sd"]
+[gd_scene load_steps=2 format=3 uid="uid://ciya5xt0t76sd"]
 
-[ext_resource type="PackedScene" uid="uid://dc3eb4b2pb2ew" path="res://Levels/level_0.tscn" id="1_ow2su"]
-[ext_resource type="PackedScene" uid="uid://cq26h3f2xm7mb" path="res://entities/player.tscn" id="2_bl148"]
+[ext_resource type="PackedScene" uid="uid://dc3eb4b2pb2ew" path="res://levels/level_0.tscn" id="1_ow2su"]
 
 [node name="Gameplay" type="Node2D"]
 
 [node name="Level0" parent="." instance=ExtResource("1_ow2su")]
-
-[node name="Player" parent="." instance=ExtResource("2_bl148")]

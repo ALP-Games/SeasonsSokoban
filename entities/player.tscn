@@ -1,21 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://cq26h3f2xm7mb"]
+[gd_scene load_steps=5 format=3 uid="uid://y07kdkyof1c0"]
 
-[ext_resource type="Script" path="res://scripts/entities/player.gd" id="1_6yeg6"]
 [ext_resource type="Texture2D" uid="uid://clfspjxniv85d" path="res://icon.svg" id="1_7u056"]
+[ext_resource type="Script" path="res://scripts/entities/grid_entity.gd" id="1_p1ays"]
+[ext_resource type="Script" path="res://scripts/entities/components/movable_component.gd" id="3_spp1q"]
+[ext_resource type="Script" path="res://scripts/entities/components/controllable_component.gd" id="4_jwkhu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjjcr"]
-
-[node name="Player" type="CharacterBody2D"]
-position = Vector2(49, 40)
-motion_mode = 1
-up_direction = Vector2(0.707107, 0.707107)
-slide_on_ceiling = false
-script = ExtResource("1_6yeg6")
+[node name="Player" type="Node2D"]
+script = ExtResource("1_p1ays")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.368627, 0, 1)
-scale = Vector2(0.15625, 0.15625)
+modulate = Color(1, 1, 0.247059, 1)
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("1_7u056")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_rjjcr")
+[node name="MovableComponent" type="Node" parent="."]
+script = ExtResource("3_spp1q")
+
+[node name="ControllableComponent" type="Node" parent="."]
+script = ExtResource("4_jwkhu")
